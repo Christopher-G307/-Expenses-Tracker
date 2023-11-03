@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  direction: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.574);
+  background-image: url(exp.webp);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: color;
+  overflow-x: hidden;
+}
+
+.app {
+  max-width: 800px;
+  margin: 5px auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+#balance {
+  font-size: 2rem;
+}
+
+.cashflow {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 10px 0;
+}
+
+.income-container,
+.balance-container,
+.expense-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+#income,
+#balance,
+#expense {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#income {
+  color: forestgreen;
+  font-size: 24px;
+}
+
+#expense {
+  color: red;
+  font-size: 24px;
+}
+
+.form-container {
+  padding: 25px 0;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form-container form {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.form-container form input {
+  padding: 5px 5px 5px 10px;
+  margin: 0 20px;
+  border-radius: 25px;
+  width: 200px;
+  border: 0.5px solid white;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+}
+
+label {
+  color: white;
+  margin-right: -10px;
+  font-size: 18px;
+}
+
+.form-container form input::placeholder {
+  color: white;
+  padding-left: 5px;
+}
+
+#incomeBtn,
+#expenseBtn {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  padding: 6px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+#incomeBtn {
+  background-color: green;
+}
+
+#expenseBtn {
+  background-color: red;
+}
+
+.transaction-container {
+  color: white;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.transaction-container h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#transaction li {
+  list-style: none;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  font-size: 18px;
+}
+
+#transaction li span {
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.transaction-container li .income-amount {
+  background-color: green;
+}
+
+.transaction-container li .expense-amount {
+  background-color: red;
+}
+
+.transaction-container ul li div button {
+  float: right;
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  border-radius: 0 26px 26px 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.504);
+  cursor: pointer;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .cashflow {
+    display: block;
+    text-align: center;
+  }
+
+  .income-container,
+  .balance-container,
+  .expense-container {
+    margin: 20px auto;
+    padding: 10px 5px;
+    font-size: 16px;
+    width: 300px;
+  }
+
+  .form-container label {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .transaction-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  ul li {
+    justify-content: space-between;
+  }
+
+  ul li div span {
+    margin: 0 10px;
+  }
+}
